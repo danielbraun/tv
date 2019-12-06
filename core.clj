@@ -1,5 +1,8 @@
 (ns tv.core
-  (:require [hiccup core page]))
+  (:require [hiccup core page livereload]
+            hiccup.bootstrap.3.layouts
+            [hiccup.bootstrap.3.components :as bs]
+            [hiccup.contrib.elements :refer [table video] :as el]))
 
 (defn chan12-1 []
   (->>
@@ -34,19 +37,21 @@
    "https://nana10-hdl-il-sw.ctedgecdn.net/10tv_Desktop/r13_1000.m3u8"])
 
 (->>
- (hiccup.page/html5
-  [:head
-   [:meta {:name :referrer
-           :content "https://13tv.co.il/live/"}]]
-  [:body
-   (for [url urls]
-     [:video {:controls true
-              ;:autoplay true
-              :muted true
-              :onclick "return false;"
-                ;:onmouseenter "this.muted = false;"
-                ;:onmouseleave "this.muted = true;"
-              :style "width: 33%;"}
-      [:source {:src url}]])
-   #_[:script "document.write('<script src=\"http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1\"></' + 'script>')"]])
- (spit "tv/index.html"))
+ {:extra-script hiccup.livereload/js-snippet
+  :extra-head (hiccup.page/include-css
+               "style.css")
+  :title "TV"
+  :base-url "//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1"
+  :content
+  [:div.container-fluid
+   (->> urls
+        (map (fn [url]
+               [:div.embed-responsive.embed-responsive-16by9
+                (el/video {:controls true
+                           :class "embed-responsive-item"} url)]))
+        (map (fn [x] [:div.col-md-4 x]))
+        (partition-all 3)
+        (map (partial bs/row {:class "row-no-gutters"})))]}
+ hiccup.bootstrap.3.layouts/basic
+ hiccup.page/html5
+ (spit "/Users/danielbraun/Desktop/tv/public/index.html"))
