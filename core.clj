@@ -49,7 +49,7 @@
                [:div.embed-responsive.embed-responsive-16by9
                 (el/video {:controls true
                            :class "embed-responsive-item"} url)]))
-        (map (fn [x] [:div.col-md-4 x]))
+        (map (fn [x] [:div.col-xs-4 x]))
         (partition-all 3)
         (map (partial bs/row {:class "row-no-gutters"})))]}
  hiccup.bootstrap.3.layouts/basic
