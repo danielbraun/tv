@@ -36,22 +36,24 @@
    "https://besttv1.aoslive.it.best-tv.com/reshetDVR01/testdvr/index_3.m3u8"
    "https://nana10-hdl-il-sw.ctedgecdn.net/10tv_Desktop/r13_1000.m3u8"])
 
-(->>
- {:extra-script hiccup.livereload/js-snippet
-  :extra-head (hiccup.page/include-css
-               "style.css")
-  :title "TV"
-  :base-url "//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1"
-  :content
-  [:div.container-fluid
-   (->> urls
-        (map (fn [url]
-               [:div.embed-responsive.embed-responsive-16by9
-                (el/video {:controls true
-                           :class "embed-responsive-item"} url)]))
-        (map (fn [x] [:div.col-xs-4 x]))
-        (partition-all 3)
-        (map (partial bs/row {:class "row-no-gutters"})))]}
- hiccup.bootstrap.3.layouts/basic
- hiccup.page/html5
- (spit "/Users/danielbraun/Desktop/tv/public/index.html"))
+(def bs-config
+  {:extra-script hiccup.livereload/js-snippet
+   :extra-head (hiccup.page/include-css
+                "style.css")
+   :title "TV"
+   :base-url "//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1"
+   :content
+   [:div.container-fluid
+    (->> urls
+         (map (fn [url]
+                [:div.embed-responsive.embed-responsive-16by9
+                 (el/video {:controls true
+                            :class "embed-responsive-item"} url)]))
+         (map (fn [x] [:div.col-xs-4 x]))
+         (partition-all 3)
+         (map (partial bs/row {:class "row-no-gutters"})))]})
+
+(->> bs-config
+     hiccup.bootstrap.3.layouts/basic
+     hiccup.page/html5
+     (spit "/Users/danielbraun/Desktop/tv/index.html"))
