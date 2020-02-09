@@ -34,7 +34,12 @@
             <video
                 controls="true"
                 class="embed-responsive-item mejs__player"
+                autoplay="true"
+                muted="true"
                 data-mejsoptions=''>
+                <xsl:attribute name="poster">
+                    <xsl:value-of select="@poster"/>
+                </xsl:attribute>
                 <xsl:attribute name="data-mejsoptions">
                     <![CDATA[ {"alwaysShowControls": "true"} ]]>
                 </xsl:attribute>
