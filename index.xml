@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <?xml-stylesheet href="style.xsl" type="text/xsl" ?>
 <channels>
-    <channel url="https://kanlivep2event-i.akamaihd.net/hls/live/747610/747610/master.m3u8"></channel>
+    <channel url="https://kanlivep2event-i.akamaihd.net/hls/live/747610/747610/master.m3u8"
+        poster="https://upload.wikimedia.org/wikipedia/commons/c/c8/Kan11Logo.svg"></channel>
     <channel url="https://kanlivep2event-i.akamaihd.net/hls/live/747600/747600/master.m3u8"></channel>
     <channel url="https://w1.013.gostreaming.tv/Knesset/myStream/playlist.m3u8"></channel>
     <channel url="https://sport5-lh.akamaihd.net/i/radiolivev_0@698733/master.m3u8"></channel>
     <channel url="https://dvr.ch20-cdnwiz.com/mobilehls/dvr.m3u8"></channel>
     <channel url="https://nana10-hdl-il-sw.ctedgecdn.net/10tv_Desktop/r13_1000.m3u8"></channel>
-    <channel url="https://reshet-live-il.ctedgecdn.net/13tv-mobile/android/r13_800.m3u8"></channel>
+    <channel
+        url="https://reshet-live-il.ctedgecdn.net/13tv-mobile/android/r13_800.m3u8"
+        poster="https://media.reshet.tv/image/upload/v1553085811/Logo_750x422_jovlxj.png"
+        ></channel>
+
 </channels>
