@@ -22,7 +22,7 @@
     <xsl:template match="channels">
         <div class="row row-no-gutters">
             <xsl:for-each select="channel">
-                <div class="col-md-4">
+                <div class="col-xs-4">
                     <xsl:apply-templates select="."/>
                 </div>
             </xsl:for-each>
