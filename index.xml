@@ -1,16 +1,12 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <?xml-stylesheet href="style.xsl" type="text/xsl" ?>
 <channels>
-    <channel url="https://kanlivep2event-i.akamaihd.net/hls/live/747610/747610/master.m3u8"
-        poster="https://upload.wikimedia.org/wikipedia/commons/c/c8/Kan11Logo.svg"></channel>
-    <channel url="https://kanlivep2event-i.akamaihd.net/hls/live/747600/747600/master.m3u8"></channel>
-    <channel url="https://w1.013.gostreaming.tv/Knesset/myStream/playlist.m3u8"></channel>
-    <channel url="https://sport5-lh.akamaihd.net/i/radiolivev_0@698733/master.m3u8"></channel>
-    <channel url="https://dvr.ch20-cdnwiz.com/mobilehls/dvr.m3u8"></channel>
+    <channel url="https://kanlivep2event-i.akamaihd.net/hls/live/747610/747610/master.m3u8" poster="https://upload.wikimedia.org/wikipedia/commons/c/c8/Kan11Logo.svg"></channel>
+    <channel url="https://kanlivep2event-i.akamaihd.net/hls/live/747600/747600/master.m3u8"
+        poster="https://upload.wikimedia.org/wikipedia/commons/6/6b/KanHinuchit.svg"></channel>
+    <channel url="https://w1.013.gostreaming.tv/Knesset/myStream/playlist.m3u8" poster="https://upload.wikimedia.org/wikipedia/he/4/43/Knessetch10.svg"></channel>
+    <channel url="https://sport5-lh.akamaihd.net/i/radiolivev_0@698733/master.m3u8" poster="https://upload.wikimedia.org/wikipedia/he/a/ad/Sport5ch.svg"></channel>
+    <channel url="https://dvr.ch20-cdnwiz.com/mobilehls/dvr.m3u8" poster="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Arutz_20.svg/1200px-Arutz_20.svg.png"></channel>
     <channel url="https://nana10-hdl-il-sw.ctedgecdn.net/10tv_Desktop/r13_1000.m3u8"></channel>
-    <channel
-        url="https://reshet-live-il.ctedgecdn.net/13tv-mobile/android/r13_800.m3u8"
-        poster="https://media.reshet.tv/image/upload/v1553085811/Logo_750x422_jovlxj.png"
-        ></channel>
-
+    <channel url="https://reshet-live-il.ctedgecdn.net/13tv-mobile/android/r13_800.m3u8" poster="https://upload.wikimedia.org/wikipedia/he/9/91/Reshet13.svg"></channel>
 </channels>

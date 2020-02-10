@@ -12,8 +12,9 @@
                 <title>TV</title>
                 <link rel="shortcut icon" href="logo.png" />
                 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous" />
+                <link rel="stylesheet" href="site.css" />
             </head>
-            <body style="background: black;">
+            <body>
                 <xsl:apply-templates />
             </body>
         </html>
@@ -36,7 +37,7 @@
                 class="embed-responsive-item mejs__player"
                 autoplay="true"
                 muted="true"
-                data-mejsoptions=''>
+                preload="metadata">
                 <xsl:attribute name="poster">
                     <xsl:value-of select="@poster"/>
                 </xsl:attribute>
