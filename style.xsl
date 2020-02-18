@@ -35,9 +35,8 @@
             <video
                 controls="true"
                 class="embed-responsive-item mejs__player"
-                autoplay="true"
                 muted="true"
-                preload="metadata">
+                >
                 <xsl:attribute name="poster">
                     <xsl:value-of select="@poster"/>
                 </xsl:attribute>
