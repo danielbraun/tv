@@ -36,7 +36,7 @@
                 controls="true"
                 class="embed-responsive-item mejs__player"
                 muted="true"
-                >
+                autoplay="true">
                 <xsl:attribute name="poster">
                     <xsl:value-of select="@poster"/>
                 </xsl:attribute>
