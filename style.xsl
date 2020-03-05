@@ -16,6 +16,8 @@
             </head>
             <body>
                 <xsl:apply-templates />
+                <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+                <script src="index.js"></script>
             </body>
         </html>
     </xsl:template>
@@ -34,14 +36,14 @@
         <div class="embed-responsive embed-responsive-16by9">
             <video
                 controls="true"
-                class="embed-responsive-item mejs__player"
+                class="embed-responsive-item"
                 muted="true"
                 autoplay="true">
                 <xsl:attribute name="poster">
                     <xsl:value-of select="@poster"/>
                 </xsl:attribute>
-                <xsl:attribute name="data-mejsoptions">
-                    <![CDATA[ {"alwaysShowControls": "true"} ]]>
+                <xsl:attribute name="src">
+                    <xsl:value-of select="@url"/>
                 </xsl:attribute>
                 <source>
                     <xsl:attribute name="src">
