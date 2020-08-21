@@ -1,0 +1,88 @@
+<table xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="#">
+
+<xsd:schema
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+<xsd:simpleType name="INTEGER">
+  <xsd:restriction base="xsd:int">
+    <xsd:maxInclusive value="2147483647"/>
+    <xsd:minInclusive value="-2147483648"/>
+  </xsd:restriction>
+</xsd:simpleType>
+
+<xsd:simpleType name="UDT.danielbraun.pg_catalog.text">
+  <xsd:restriction base="xsd:string">
+  </xsd:restriction>
+</xsd:simpleType>
+
+<xsd:simpleType name="BOOLEAN">
+  <xsd:restriction base="xsd:boolean"></xsd:restriction>
+</xsd:simpleType>
+
+<xsd:complexType name="RowType">
+  <xsd:sequence>
+    <xsd:element name="id" type="INTEGER" minOccurs="0"></xsd:element>
+    <xsd:element name="url" type="UDT.danielbraun.pg_catalog.text" minOccurs="0"></xsd:element>
+    <xsd:element name="poster" type="UDT.danielbraun.pg_catalog.text" minOccurs="0"></xsd:element>
+    <xsd:element name="position" type="INTEGER" minOccurs="0"></xsd:element>
+    <xsd:element name="name" type="UDT.danielbraun.pg_catalog.text" minOccurs="0"></xsd:element>
+    <xsd:element name="active" type="BOOLEAN" minOccurs="0"></xsd:element>
+  </xsd:sequence>
+</xsd:complexType>
+
+<xsd:complexType name="TableType">
+  <xsd:sequence>
+    <xsd:element name="row" type="RowType" minOccurs="0" maxOccurs="unbounded"/>
+  </xsd:sequence>
+</xsd:complexType>
+
+<xsd:element name="table" type="TableType"/>
+
+</xsd:schema>
+
+<row>
+  <id>1</id>
+  <url>https://kanlivep2event-i.akamaihd.net/hls/live/747610/747610/master.m3u8</url>
+  <poster>https://upload.wikimedia.org/wikipedia/commons/c/c8/Kan11Logo.svg</poster>
+  <position>0</position>
+  <name>כאן 11</name>
+  <active>true</active>
+</row>
+
+<row>
+  <id>2</id>
+  <url>https://kanlivep2event-i.akamaihd.net/hls/live/747600/747600/master.m3u8</url>
+  <poster>https://upload.wikimedia.org/wikipedia/commons/6/6b/KanHinuchit.svg</poster>
+  <position>0</position>
+  <name>כאן חינוכית</name>
+  <active>true</active>
+</row>
+
+<row>
+  <id>3</id>
+  <url>https://contact.gostreaming.tv/Knesset/myStream/playlist.m3u8</url>
+  <poster>https://upload.wikimedia.org/wikipedia/he/4/43/Knessetch10.svg</poster>
+  <position>0</position>
+  <name>ערוץ הכנסת</name>
+  <active>true</active>
+</row>
+
+<row>
+  <id>6</id>
+  <url>https://reshet-live-il.ctedgecdn.net/13tv-mobile/android/r13_800.m3u8</url>
+  <poster>https://upload.wikimedia.org/wikipedia/he/9/91/Reshet13.svg</poster>
+  <position>0</position>
+  <name>רשת 13</name>
+  <active>true</active>
+</row>
+
+<row>
+  <id>7</id>
+  <url>https://82-80-192-30.vidnt.com/shoppingil_ShoppingIL21TVRepeat/_definst_/smil:ShoppingIL21TV.smil/playlist.m3u8</url>
+  <poster>https://upload.wikimedia.org/wikipedia/he/b/b9/סמליל_ערוץ_הקניות.jpg</poster>
+  <position>0</position>
+  <name>ערוץ הקניות</name>
+  <active>true</active>
+</row>
+
+</table>
